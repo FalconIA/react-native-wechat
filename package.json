@@ -1,29 +1,30 @@
 {
-  "name": "react-native-wechat",
-  "version": "1.9.10",
+  "name": "@falconia/react-native-wechat",
+  "version": "2.0.1",
   "description": "react-native library for wechat app",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo 1"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/weflex/react-native-wechat.git"
+    "url": "git+ssh://git@github.com/FalconIA/react-native-wechat.git"
   },
   "keywords": [
     "wechat",
     "react",
     "react-native",
     "react-component",
-    "ios"
+    "ios",
+    "android"
   ],
   "dependencies": {
     "events": "1.0.2"
   },
   "peerDependencies": {
-    "react-native": ">=0.40"
+    "react-native": "^0.57.8"
   },
-  "author": "Yorkie Liu <yorkiefixer@gmail.com>",
+  "author": "Pengxuan Men <pengxuan.men@gamil.com>",
   "contributors": [
     {
       "name": "Yorkie Liu",
@@ -32,11 +33,11 @@
     {
       "name": "Deng Yun",
       "email": "tdzl2003@gmail.com"
+    },
+    {
+      "name": "Pengxuan Men",
+      "email": "pengxuan.men@gamil.com"
     }
   ],
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/weflex/react-native-wechat/issues"
-  },
-  "homepage": "https://github.com/weflex/react-native-wechat#readme"
+  "license": "MIT"
 }

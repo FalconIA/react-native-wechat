@@ -5,7 +5,7 @@
 [React Native] bridging library that integrates WeChat SDKs:
 
 - [x] iOS SDK 1.7.2
-- [x] Android SDK 221
+- [x] Android Open SDK 5.1.6
 
 [react-native-wechat] has the following tracking data in the open source world:
 
@@ -58,12 +58,6 @@ This method is only available on iOS.
 - returns {Boolean} if WeChat is installed.
 
 Check if the WeChat app is installed on the device.
-
-#### isWXAppSupportApi()
-
-- returns {Boolean} Contains the result.
-
-Check if wechat support open url.
 
 #### getApiVersion()
 

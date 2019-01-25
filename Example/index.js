@@ -1,26 +1,20 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- */
-"use strict";
-
-var React = require('react-native');
-var {
+import React, { Component }  from "react";
+import {
   AppRegistry,
+  Platform,
   StyleSheet,
   Text,
   View,
   TouchableOpacity
-} = React;
-var WeChat = require('./react-native-wechat.js');
+} from 'react-native';
+import * as WeChat from 'react-native-wechat';
 
-class Example extends React.Component {
-  constructor(props) {
+export class Example extends Component<Props> {
+  constructor(props: Props) {
     super(props);
     this.state = {
       apiVersion: 'waiting...',
       wxAppInstallUrl: 'waiting...',
-      isWXAppSupportApi: 'waiting...',
       isWXAppInstalled: 'waiting...',
     };
   }
@@ -29,8 +23,7 @@ class Example extends React.Component {
       await WeChat.registerApp('1234567');
       this.setState({
         apiVersion: await WeChat.getApiVersion(),
-        wxAppInstallUrl: await WeChat.getWXAppInstallUrl(),
-        isWXAppSupportApi: await WeChat.isWXAppSupportApi(),
+        wxAppInstallUrl: Platform.OS === 'ios' ? await WeChat.getWXAppInstallUrl() : null,
         isWXAppInstalled: await WeChat.isWXAppInstalled()
       });
       console.log(this.state);
@@ -56,7 +49,6 @@ class Example extends React.Component {
       <View style={styles.container}>
         <Text>api版本：{this.state.apiVersion}</Text>
         <Text>微信注册url：{this.state.wxAppInstallUrl}</Text>
-        <Text>是否支持api：{String(this.state.isWXAppSupportApi)}</Text>
         <Text>是否安装微信：{String(this.state.isWXAppInstalled)}</Text>
         <TouchableOpacity onPress={this._openWXApp}>
           <Text>打开微信</Text>
@@ -69,7 +61,7 @@ class Example extends React.Component {
   }
 }
 
-var styles = StyleSheet.create({
+const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',

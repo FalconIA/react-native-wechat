@@ -101,14 +101,6 @@
 
 
 
-/*! @brief 判断当前微信的版本是否支持OpenApi
- *
- * @return 支持返回YES，不支持返回NO。
- */
-+(BOOL) isWXAppSupportApi;
-
-
-
 /*! @brief 获取微信的itunes安装地址
  *
  * @return 微信的安装地址字符串。

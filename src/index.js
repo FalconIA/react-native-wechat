@@ -113,13 +113,6 @@ export const registerAppWithDescription = wrapRegisterApp(
 export const isWXAppInstalled = wrapApi(WeChat.isWXAppInstalled);
 
 /**
- * Return if the wechat application supports the api
- * @method isWXAppSupportApi
- * @return {Promise}
- */
-export const isWXAppSupportApi = wrapApi(WeChat.isWXAppSupportApi);
-
-/**
  * Get the wechat app installed url
  * @method getWXAppInstallUrl
  * @return {String} the wechat app installed url
@@ -267,7 +260,7 @@ export function pay(data) {
   correct('noncestr', 'nonceStr');
   correct('partnerid', 'partnerId');
   correct('timestamp', 'timeStamp');
-  
+
   // FIXME(94cstyles)
   // Android requires the type of the timeStamp field to be a string
   if (Platform.OS === 'android') data.timeStamp = String(data.timeStamp)
