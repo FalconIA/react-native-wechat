@@ -13,7 +13,7 @@ module.exports = {
         providesModuleNodeModules: [
             'react-native',
             'react',
-            'prop-types',
+            '@babel/runtime',
             'events',
         ],
     },
