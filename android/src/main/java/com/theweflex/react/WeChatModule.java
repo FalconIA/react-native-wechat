@@ -485,6 +485,7 @@ public class WeChatModule extends ReactContextBaseJavaModule implements IWXAPIEv
             PayResp resp = (PayResp) (baseResp);
             map.putString("type", "PayReq.Resp");
             map.putString("returnKey", resp.returnKey);
+            map.putString("extData", resp.extData);
         }
 
         this.getReactApplicationContext()
