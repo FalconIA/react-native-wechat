@@ -22,9 +22,20 @@
       <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
 
         <activity
-          android:name=".wxapi.WXEntryActivity"
-          android:label="@string/app_name"
-          android:exported="true" />
+                android:name=".wxapi.WXEntryActivity"
+                android:label="@string/app_name"
+                android:theme="@android:style/Theme.Translucent.NoTitleBar"
+                android:exported="true"
+                android:taskAffinity="com.example"
+                android:launchMode="singleTask" />
+
+        <activity
+                android:name=".wxapi.WXPayEntryActivity"
+                android:label="@string/app_name"
+                android:theme="@android:style/Theme.Translucent.NoTitleBar"
+                android:exported="true"
+                android:taskAffinity="com.example"
+                android:launchMode="singleTask" />
     </application>
 
 </manifest>
